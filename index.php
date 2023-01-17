@@ -1,5 +1,5 @@
 <?php
-  include 'connection.php'
+include 'connection.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,12 +53,12 @@
 <body>
   <div id="login-container">
     <h2>Login</h2>
-    <form action="" method="post">
+    <form action="authenticate_user.php" method="post">
       <label for="username">Username</label>
-      <input type="text" name="username" id="username">
+      <input type="text" name="username" id="username" required>
       <label for="password">Password</label>
-      <input type="text" name="username" id="password">
-      <input type="submit" name="login">
+      <input type="password" name="password" id="password" required>
+      <input type="submit" name="login" value="login">
       <p>
     </form>
   </div>

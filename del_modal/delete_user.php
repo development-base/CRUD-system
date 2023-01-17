@@ -1,3 +1,4 @@
 <?php
-  $sql = "DELETE FROM Users WHERE id ='".$_POST['delete_id']."'";
+//TODO
+  // $sql = "DELETE FROM Users WHERE id ='".$_POST['delete_id']."'";
   

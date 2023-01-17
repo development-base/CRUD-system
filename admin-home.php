@@ -2,7 +2,7 @@
 include 'connection.php';
 include 'getUsersData.php';
 include 'reg_modal/register_modal.php';
-include 'del_modal/delete_modal.php'
+include 'del_modal/delete_modal.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,7 +77,7 @@ include 'del_modal/delete_modal.php'
 <body>
   <header>
     <a href="admin-home.php"><img class="header-icon" src="img/icon-admin32.png"></a>
-    <img class="header-icon" src="img/logout.png">
+    <a href="admin-logout.php"><img class="header-icon" src="img/logout.png"></a>
   </header>
 
   <div id="user-details">
@@ -121,13 +121,13 @@ include 'del_modal/delete_modal.php'
           <td><?php echo $row['tin']; ?></td>
           <td><?php echo $row['philhealth']; ?></td>
           <td id="edit-icon">
-            <form method="post">
-              <button type="submit" name="edit_modal" value="<?php $row['id'] ?>">
+            <form action="admin-edit-user.php" method="post">
+              <button type="submit" name="edit_modal" value="<?php echo $row['id'] ?>">
                 <img src="img/edit.png">
               </button>
             </form>
             <form method="post">
-              <button id="delete-btn" type="submit" name="delete-btn" value="<?php $row['id'] ?>">
+              <button id="delete-btn" type="submit" name="delete-btn" value="<?php echo $row['id']; ?>">
                 <img src="img/delete.png">
               </button>
             </form>
